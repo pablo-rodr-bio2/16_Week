@@ -64,8 +64,4 @@ console.log(typeof newObject);
 //////////////////////////////////////////////////////////////////////////
 // Indexed Access Types
 var SomeObject = [{ name: 'Pablo', body: { height: 1.86, age: 36, hair: 'grey' } }];
-console.log('Indexed Access Types');
-console.log(SomeObject);
-console.log('type humanName = "name"');
-console.log('type Name = Human[humanName]');
-console.log('type Name = string');
+//////////////////////////////////////////////////////////////////////////

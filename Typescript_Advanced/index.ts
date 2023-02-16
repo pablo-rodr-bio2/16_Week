@@ -96,11 +96,6 @@ type Human = typeof SomeObject[number]
 type humanName = "name"
 type Name = Human[humanName]
 
-console.log('Indexed Access Types')
-console.log(SomeObject)
-console.log('type humanName = "name"')
-console.log('type Name = Human[humanName]')
-console.log('type Name = string')
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -121,3 +116,20 @@ type AnimalHasHotBlood = TypeOfBlood<Mammal>
 
 type AnimalHasColdBlood = TypeOfBlood<number>
 
+//////////////////////////////////////////////////////////////////////////
+
+// Mapped Types
+
+type OneInputArgs = {
+    name: string
+    value: number
+    onChange: (value:number) => void
+}
+
+type ArgsAsStrings<Type> = {
+    [Property in keyof Type]: string
+}
+
+type OneInputArgsAsStrings = ArgsAsStrings<OneInputArgs>
+
+//////////////////////////////////////////////////////////////////////////
