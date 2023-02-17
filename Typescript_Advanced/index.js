@@ -71,3 +71,13 @@ var Languages = {
     pt: 'portuguese',
     esp: 'spanish'
 };
+var isProduct = function (item) { return typeof item.name !== 'undefined'; };
+var isService = function (item) { return typeof item.suscription !== 'undefined'; };
+var renderSellingThing = function (item) {
+    if (isProduct(item)) {
+        console.log("".concat(item.name, " + ").concat(item.price));
+        return true;
+    }
+    console.log("".concat(item.suscription, " + ").concat(item.mode));
+    return false;
+};

@@ -154,3 +154,32 @@ const Languages = {
     pt: 'portuguese',
     esp: 'spanish'
 } as const
+
+// Type Guard and predicates
+
+type Product = {
+    name: string
+    price: number
+}
+
+type Service = {
+    suscription: number
+    mode: string
+}
+
+type SellingThing = Product | Service
+
+const isProduct = (item: SellingThing): item is Product => typeof (item as Product).name !== 'undefined'
+
+const isService = (item: SellingThing): item is Service => typeof (item as Service).suscription !== 'undefined'
+
+const renderSellingThing = (item: SellingThing) => {
+    if(isProduct(item)) {
+        console.log(`${item.name} + ${item.price}`)
+        return true
+    }
+    
+    console.log(`${item.suscription} + ${item.mode}`)
+    return false
+
+}
