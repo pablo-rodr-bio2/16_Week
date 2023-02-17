@@ -133,3 +133,24 @@ type ArgsAsStrings<Type> = {
 type OneInputArgsAsStrings = ArgsAsStrings<OneInputArgs>
 
 //////////////////////////////////////////////////////////////////////////
+
+
+// Template Literal Types
+
+type World = 'world'
+
+type Greeting = `Hello ${World}`
+
+type Lang = 'en' | 'esp' | 'pt' 
+
+type LanGreetings = `${Lang}_${Greeting}`
+
+//////////////////////////////////////////////////////////////////////////
+
+// const assertions
+
+const Languages = {
+    en : 'english',
+    pt: 'portuguese',
+    esp: 'spanish'
+} as const

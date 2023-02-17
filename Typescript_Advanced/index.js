@@ -65,3 +65,9 @@ console.log(typeof newObject);
 // Indexed Access Types
 var SomeObject = [{ name: 'Pablo', body: { height: 1.86, age: 36, hair: 'grey' } }];
 //////////////////////////////////////////////////////////////////////////
+// const assertions
+var Languages = {
+    en: 'english',
+    pt: 'portuguese',
+    esp: 'spanish'
+};
